@@ -1,0 +1,26 @@
+
+.svg-box {
+	position:absolute;
+  animation-name: rotateSplash;
+  animation-duration:0.5s;
+  animation-iteration-count:1;
+  }
+h1{
+  width:100%;
+	position:absolute;
+	z-index:10;
+  text-align:center;
+  font-size:250px;
+  color:white;
+}
+
+ 
+@keyframes rotateSplash {
+    0%{
+    transform:scale(0.3);
+  }
+  100%{
+    transform:scale(1.0);
+  }
+}
+
