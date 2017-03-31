@@ -7,10 +7,12 @@ $(window).mousemove(function( event ) {
 	createAndShowSplash(event.clientX, event.clientY);
 });
 
+let count =0;
+
 function createAndShowSplash (topgap, leftgap) {
 	copy = $("#splash").clone();
 
-	copy[0].setAttribute("id", "copy_splash");
+	copy[0].setAttribute("id", "copy_splash_"+count);
 	copy[0].setAttribute("fill", get_random_color());
 	let size = rand(50,300);
 	copy[0].setAttribute("width", size+'px');
@@ -20,6 +22,12 @@ function createAndShowSplash (topgap, leftgap) {
 	
 	copy.appendTo("body");
 	copy.show();
+	let current = copy;
+	count++;
+	setTimeout(function() {
+		console.log(current);
+		current.remove();
+	},rand(2,10)*1000);
 }
 
 function rand(min, max) {
