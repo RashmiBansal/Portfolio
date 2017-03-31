@@ -30,14 +30,6 @@ function createAndShowSplash (topgap, leftgap) {
 	},rand(2,10)*1000);
 }
 
-function deleteElement(element) {
-	//console.log($("copy_splash_"+count));
-	//$("#copy_splash_"+count).remove();
-	console.log(element);
-	element.remove();
-	//element.parentElement.removeChild(element);
-}
-
 function rand(min, max) {
     return parseInt(Math.random() * (max-min+1), 10) + min;
 }
